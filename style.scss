@@ -1,0 +1,287 @@
+$font-titulo: "Koh Santepheap", sans-serif;
+$font-texto: "Poppins", sans-serif;
+$cor-de-fundo-caixas: #f8f5f2;
+
+
+@mixin flexbox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin estilo-button{
+    background-color: #ff0000;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    color: white;
+    font-family: $font-texto;
+    font-size: 1rem;
+
+}
+
+@mixin titulos{
+    font-size: 1.5rem;
+    font-family: $font-titulo;
+    color: black;
+    font-weight: 500;
+    
+}
+
+@mixin paragrafos{
+    width: 30vw;
+    padding: 1rem 0;
+    font-family: $font-texto;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    // o 1 é para cima e para baixo (top, bottom)
+    // o 2 é para os lados (direira e esquerda)
+    margin: 0 10%;
+}
+
+header{
+    @include flexbox();
+    height: 10vh;
+    color:black;
+    font-family: $font-texto;
+
+    ul{
+        @include flexbox();
+        width: 30vw;
+        list-style: none;
+    }
+
+    a{
+        text-decoration: none;
+        color: black;
+    }
+
+    a:visited :hover{
+        color: #242323b0;
+    }
+}
+
+button{
+    @include estilo-button();
+}
+
+.primeira-sessao{
+    @include flexbox();
+
+    div{
+        height: 20vh;
+        @include flexbox();
+        flex-direction: column;
+        align-items: flex-start;
+        @include titulos();
+    }
+
+    p{
+        @include paragrafos();
+    }
+
+    img{
+       width: 22vw;
+       margin: 0 6rem;
+       padding: 4rem 0;
+    }
+}
+
+.segunda-sessao{
+    
+    @include flexbox();
+    margin: 2rem;
+
+    img{
+        width: 40vw;
+        margin:0 2rem;
+        padding: 11rem 0;
+    }
+
+    div{
+        height: 20vh;
+        margin: 0 4.3rem 5rem;
+        @include flexbox();
+        flex-direction: column;
+        align-items: flex-start;
+        @include titulos();
+    }
+
+    h3{
+        @include titulos();
+        font-size: 1.2rem;
+        color: red;
+    }
+
+    h1{
+        margin: 0 0 0.8rem 0;
+    }
+
+    p{
+        @include paragrafos();
+        padding: 0 0 0.8rem 0;
+        
+    }
+
+}
+
+.container3{
+    @include titulos();
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    margin: 5.3rem 0;  
+}
+
+.container3{
+    @include flexbox();
+    flex-direction: column;
+    @include titulos();
+        font-size: 3.5rem;
+        margin: 15rem 11rem; 
+    
+}
+
+
+.terceira-sessao {
+    @include flexbox();
+    flex-direction: row; 
+    justify-content: space-evenly;
+
+    div {
+        background-color: #ecebea;
+        width: 20vw;
+        height: 52vh;
+        border-radius: 7%;
+        
+        img{
+            width: 70%;
+            margin-left: 3rem;
+            position: relative;
+            top: -70px;
+            
+        }
+
+        h2{
+            @include titulos();
+            font-size: 2rem;
+            text-align: center;
+            align-items: center;
+            width: 100%;
+            margin-top: -3rem;
+        }
+
+        p{
+            @include paragrafos();
+            font-weight: 400;
+            text-align: center;
+            font-size: 1.2rem;
+            width: 80%;
+            margin: 2rem;
+            margin-top: 1rem;
+        }
+
+        h4{
+            @include titulos();
+            margin: 1.5rem;
+            margin-top: -1rem;
+            text-align: center;
+            font-size: 1.6rem;
+            width: 80%;
+            color: #ff0000;
+            
+        }
+
+    }
+}
+
+.quarta-sessao{
+    @include flexbox();
+    justify-content: space-evenly;
+
+    div{
+        @include titulos();
+        font-size: 1rem;
+        background-color: #ecebea;
+        border-radius: 15px;
+        width: 35vw;
+        height: 33vh;
+        margin-bottom: 2rem;
+        margin-top: -5rem;
+
+
+        img{
+            margin: 2rem;
+        }
+    
+        h2{
+            margin: 2rem;
+            margin-top: -1rem;
+            font-weight: 400;
+        }
+    
+        p{
+            @include paragrafos();
+            font-size: 0.9rem;
+            font-weight: 400;
+            margin: 2rem;
+            margin-top: -2rem;
+        }
+
+        .container_comentario{
+            margin-top: -3rem;
+            width: 6vw;
+        }
+
+        .container_comentario2{
+            margin-top: -3rem;
+            width: 6vw;
+        }
+    }
+
+}
+
+.quinta-sessao{
+    @include flexbox();
+    justify-content: space-around;
+    margin-top: 8rem;
+    margin-bottom: 9rem;
+    
+
+    h2{
+        @include titulos();
+        font-size: 1.1rem;
+    }
+
+    ul{
+        list-style: none;
+        margin-top: 1rem;
+        @include paragrafos();
+        font-weight: 400;
+        width: 10vw;
+        font-size: 1rem;
+        padding: 0;
+
+    li{
+        margin-top: 0.5rem;
+    }
+
+    }
+
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
