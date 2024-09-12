@@ -6,10 +6,6 @@
     <img src="https://github.com/user-attachments/assets/2a6a8979-7138-4403-8408-3b7cda48b9d4" width="700">
 </p>
 
-## 🚀 Funcionalidades
-
-- 📱 **Design Responsivo**: Layout adaptável para diferentes dispositivos, proporcionando uma ótima experiência tanto em smartphones quanto em desktops.
-
 ## 🛠️ Tecnologias Utilizadas
 
 - **HTML5**
